@@ -6,6 +6,7 @@ import BlurText from '../components/Intro.tsx'
 import About from '../components/About.astro'
 import Experience from '../components/Experience.tsx'
 import Project from '../components/Project.tsx'
+import Footer from '../components/Footer.astro'
 ---
 
 <Layout>
@@ -13,16 +14,16 @@ import Project from '../components/Project.tsx'
 	<section class="relative min-h-screen w-full flex items-center justify-center bg-black">
 		<div class="absolute inset-0 w-full h-full">
 			<Aurora 
-				colorStops={["#030507", "#b19eef", "#613fe9"]}
-				blend={0.5}
-				amplitude={1.0}
+				colorStops={["#000000", "#374151", "#000000"]}
+				blend={0.7}
+				amplitude={1.5}
 				speed={0.5}
 				client:load
 			/>
 		</div>
 		<div class="relative z-10 flex flex-col items-center">
 			<BlurText
-				text="Hey, I'm Stanley"
+				text="Hey, I'm Stanley."
 				delay={150}
 				animateBy="words"
 				direction="top"
@@ -34,9 +35,16 @@ import Project from '../components/Project.tsx'
 				delay={200}
 				animateBy="words"
 				direction="top"
-				className="text-2xl text-gray-300"
+				className="text-2xl text-gray-300 mb-8"
 				client:load
 			/>
+			<a 
+				href="/stanley_resume.pdf" 
+				target="_blank"
+				class="px-8 py-3 text-gray-300 hover:text-white border border-gray-700 hover:border-gray-500 rounded-md font-medium transition-all duration-300"
+			>
+				My Resume
+			</a>
 		</div>
 	</section>
 	<About />
@@ -106,5 +114,6 @@ import Project from '../components/Project.tsx'
 				client:load
 			/>
 		</div>
+		<Footer />
 	</section>
 </Layout>

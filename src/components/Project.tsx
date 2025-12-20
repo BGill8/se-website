@@ -43,7 +43,7 @@ export default function Project({
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 underline"
+                className="relative text-gray-200 font-medium hover:text-blue-600 transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all after:duration-300"
               >
                 GitHub
               </a>
@@ -53,7 +53,7 @@ export default function Project({
                 href={liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 underline"
+                className="relative text-gray-200 font-medium hover:text-blue-600 transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all after:duration-300"
               >
                 Live Demo
               </a>
